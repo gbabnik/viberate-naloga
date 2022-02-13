@@ -6,14 +6,15 @@ export default function PopularityResponsiveBar(props) {
     const maxValue = 10;
     
     let addedChartData = [...props.popularityData].reverse();
-    let y = Object.assign([], addedChartData.reverse());
-    // console.log(addedChartData);
+    let y = Object.assign([], addedChartData);
     // addedChartData.reverse();
     // console.log(addedChartData);
     // console.log(y) 
     addedChartData.reverse().forEach(element => {element.reversePercentage = maxValue - element.percentage;    
-                                    element.blank = maxValue;
-                                    element.city = element.city.toUpperCase();});
+                                                element.blank = maxValue;
+                                                element.city = element.city.toUpperCase();
+                                                }
+                                    );
                                    
     
 
@@ -61,7 +62,7 @@ export default function PopularityResponsiveBar(props) {
     <div>
         <div style={{ height: "250px" }}>
           <ResponsiveBar 
-                data={addedChartData} 
+                data={y} 
                 keys={["percentage", "reversePercentage"]} 
                 indexBy="city" 
                 layout="horizontal"
