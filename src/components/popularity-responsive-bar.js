@@ -5,7 +5,7 @@ export default function PopularityResponsiveBar(props) {
  
     const maxValue = 10;
     
-    let addedChartData = [...props.popularityData];
+    let addedChartData = [...props.popularityData.reverse()];
     addedChartData.reverse();
     let addedChartData2 = Object.assign([], addedChartData);
     // addedChartData.reverse();
