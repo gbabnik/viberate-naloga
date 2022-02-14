@@ -67,7 +67,7 @@ export default function PopularityResponsiveBar(props) {
                 margin={{ top: 0, right: 120, bottom: 20, left: 0 }}
                 padding={0.85}
                 valueScale={{ type: "linear" }}
-                animate={true}
+                animate={false}
                 minValue={0}
                 maxValue={maxValue}
                 enableLabel={false}
@@ -79,7 +79,7 @@ export default function PopularityResponsiveBar(props) {
                 }} 
                 axisBottom={null}
                 axisLeft={null}
-                // isInteractive = {false} 
+                isInteractive = {false} 
                 enableGridX = {false}  
                 enableGridY = {true}   
                                   
