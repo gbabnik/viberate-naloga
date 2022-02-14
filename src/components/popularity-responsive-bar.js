@@ -73,14 +73,15 @@ export default function PopularityResponsiveBar(props) {
                 enableLabel={false}
                 axisTop={null}
                 axisRight={{
-                    tickSize: 5,
-                    tickPadding: 1,
+                    tickSize: 0,
+                    tickPadding: 6,
                     tickRotation: 0,
                 }} 
                 axisBottom={null}
                 axisLeft={null}
                 enableGridX = {false}  
-                enableGridY = {true}                      
+                enableGridY = {true}    
+                isInteractive={false}                  
                 />
         </div>
      </div>   

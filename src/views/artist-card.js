@@ -17,8 +17,6 @@ export default function ArtistCard () {
     const [isLoading, setLoading] = useState(true);
 
       useEffect(() => {
-        setLoading(true);
-        
         axios.get(artistURL).then((response) => {
           setArtistsData(response.data);
           setLoading(false);
@@ -29,13 +27,9 @@ export default function ArtistCard () {
       }, [artistURL]);
   
 
-if (isLoading) {
-    return <Preloader />;
-}
+if (isLoading) return <Preloader />;
 if (error) return <div className = "error"><div className ="error-msg"> Error: {error.message}</div></div>;
 if (!artistsData) return <div className = "error"><div className ="error-msg"> </div></div>;
-
-
 
 //   console.log(artistsData.data.genre.id)
 
@@ -121,7 +115,7 @@ if (!artistsData) return <div className = "error"><div className ="error-msg"> <
                 <div className="col-content">
                    <div className="stats-sheet">
                         <label>Most popular in</label>
-                        {artistsData && <PopularityResponsiveBar popularityData = {artistsData.data.popularity.reverse()} /> }
+                         <PopularityResponsiveBar popularityData = {artistsData.data.popularity.reverse()} /> 
                     </div> 
                 </div>
             </div>
