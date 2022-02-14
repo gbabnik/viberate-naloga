@@ -1,20 +1,21 @@
 import { ResponsiveBar } from '@nivo/bar';
 import React from 'react';
+import { memo } from "react";
 
-export default function PopularityResponsiveBar(props) {
+ function PopularityResponsiveBar(props) {
  
     const maxValue = 10;
     
-    let addedChartData = [...props.popularityData];
+    let addedChartData = [...props.popularityData].reverse();
     // addedChartData.reverse();
-    // let addedChartData2 = Object.assign([], addedChartData);
-    addedChartData.reverse().forEach(element => {element.reversePercentage = maxValue - element.percentage;    
+    let addedChartData2 = Object.assign([], addedChartData);
+    addedChartData2.forEach(element => {element.reversePercentage = maxValue - element.percentage;    
                                         element.city = element.city.toUpperCase();
                                         }
                                     );
                                    
     // console.log(addedChartData);  
-    // console.log(addedChartData2);                             
+    // console.log(addedChartData.reverse());                             
                                     
 
     return(
@@ -89,3 +90,5 @@ export default function PopularityResponsiveBar(props) {
     
         )
     };
+
+    export default memo(PopularityResponsiveBar);
