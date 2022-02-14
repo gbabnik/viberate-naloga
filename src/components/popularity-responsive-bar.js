@@ -9,8 +9,8 @@ export default function PopularityResponsiveBar(props) {
     addedChartData.reverse();
     let addedChartData2 = Object.assign([], addedChartData);
     addedChartData2.forEach(element => {element.reversePercentage = maxValue - element.percentage;    
-                                                element.city = element.city.toUpperCase();
-                                                }
+                                        element.city = element.city.toUpperCase();
+                                        }
                                     );
                                    
     // console.log(addedChartData);  
@@ -73,15 +73,16 @@ export default function PopularityResponsiveBar(props) {
                 enableLabel={false}
                 axisTop={null}
                 axisRight={{
-                    tickSize: 0,
-                    tickPadding: 6,
+                    tickSize: 5,
+                    tickPadding: 1,
                     tickRotation: 0,
                 }} 
                 axisBottom={null}
                 axisLeft={null}
+                isInteractive = {false} 
                 enableGridX = {false}  
-                enableGridY = {true}    
-                isInteractive={false}                  
+                enableGridY = {true}   
+                                  
                 />
         </div>
      </div>   

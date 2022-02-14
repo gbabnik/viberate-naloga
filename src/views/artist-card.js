@@ -115,7 +115,7 @@ if (!artistsData) return <div className = "error"><div className ="error-msg"> <
                 <div className="col-content">
                    <div className="stats-sheet">
                         <label>Most popular in</label>
-                         <PopularityResponsiveBar popularityData = {artistsData.data.popularity.reverse()} /> 
+                        {artistsData && <PopularityResponsiveBar popularityData = {artistsData.data.popularity.reverse()} /> }
                     </div> 
                 </div>
             </div>
